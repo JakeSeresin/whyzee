@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts CDN fallback — works on Vercel deployment.
+   When local TTFs are present in /public/fonts/, the @font-face blocks below
+   take precedence. Both are kept so the app works with or without local files. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@500;600&display=swap');
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  src: url('/fonts/ShareTechMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-bg: #09090e;
+  --color-surface: #111118;
+  --color-surface2: #18181f;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-text: #f0f0f8;
+  --color-text2: #8080a0;
+  --color-text3: #44445a;
+}
+
+.light {
+  --color-bg: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-surface2: #f7f8fa;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-text: #111827;
+  --color-text2: #6b7280;
+  --color-text3: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size, 16px);
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow: hidden;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+
+.text-shadow-glow {
+  text-shadow: 0 0 40px #ff2277, 0 0 80px rgba(255, 34, 119, 0.5);
+}
+
+.gradient-orange-pink-cyan {
+  background: linear-gradient(90deg, #ff6b00, #ff3fa0, #00d4ff);
+}
+
+::selection {
+  background-color: rgba(255, 107, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Tailwind alias helpers */
+.bg-app-bg { background-color: var(--color-bg); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface2 { background-color: var(--color-surface2); }
+.border-app-border { border-color: var(--color-border); }
+.text-text1 { color: var(--color-text); }
+.text-text2 { color: var(--color-text2); }
+.text-text3 { color: var(--color-text3); }
