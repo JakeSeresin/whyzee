@@ -1,0 +1,44 @@
+{
+  "name": "GTA Cheat Codes",
+  "short_name": "GTA Codes",
+  "description": "The ultimate offline GTA cheat code encyclopedia — 100 cheats for PC, PlayStation, and Xbox across all Grand Theft Auto games.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#09090e",
+  "theme_color": "#ff6b00",
+  "categories": ["games", "reference", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "All Cheats",
+      "short_name": "Cheats",
+      "description": "Browse all cheat codes",
+      "url": "/cheats"
+    },
+    {
+      "name": "Favorites",
+      "short_name": "Favorites",
+      "description": "View your favorite cheats",
+      "url": "/favorites"
+    }
+  ]
+}
